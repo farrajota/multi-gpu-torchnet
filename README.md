@@ -67,12 +67,12 @@ The `train` scores use more data augmentation preprocessing compared to the `tes
 Dataset | train | test
 --- | --- | ---
 Cifar10 *(disk)* | 0.01509s | 0.00953s
-Cifar10 *(ram)* | 0.00772s  | 0.00557s
-ILSVRC2012 *(disk)* | 0.34635 | 0.35729
-ILSVRC2012 *(ram)* | 0.34553 | 0.36107
+Cifar10 *(ram)* | **0.00772s**  | **0.00557s**
+ILSVRC2012 *(disk)* | 0.34635 | **0.35729**
+ILSVRC2012 *(ram)* | **0.34553** | 0.36107
 
 
-> Note: This tests were done using a 6-core Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz, 32GB ram, 2TB SSHD and Ubuntu 14.04. The overhead is small enough that it can be hidden by using more cores or a faster disk.
+> Note: This tests were done using a 6-core Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz, 32GB ram, 2TB SSHD and Ubuntu 14.04. Note that the overhead is very small when using datasets with bigger images like the Imagenet, meaning that the overhead can be hidden by using enough cores or a faster disk.
 
 
 ## Code Description
