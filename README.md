@@ -12,7 +12,7 @@ This repo shows how to train a object classifier over ImageNet/Cifar10/Cifar100/
 
 ## Requirements
 
-- cuda compatible GPU
+- NVIDIA GPU with compute capability 3.5+ (2GB+ ram)
 - [torch7](http://torch.ch/docs/getting-started.html#_)
 - [torchnet](https://github.com/torchnet/torchnet)
 - [dbcollection](https://github.com/farrajota/dbcollection)
@@ -32,7 +32,7 @@ th main.lua
 
 > Note: You must have the ImageNet ILSVRC2012 dataset (or any other dataset) setup before running this script. For more information about how to setup your datasets using `dbcollection` see [here](https://github.com/farrajota/dbcollection).
 
-By default, the script runs 1-GPU AlexNet with the CUDNN backend and 4 data-loader threads.
+By default, the script trains theAlexNet model on 1 GPU with the CUDNN backend and loads data from disk using 4 CPU threads.
 
 To run an alexnet model using two or more GPUs, set `nGPU` to the number of GPUs you want to use (in this example only two are used):
 ```bash
