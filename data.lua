@@ -88,7 +88,7 @@ end
 
 
 local function data_loader(name, mode)
-    local dbc = require 'dbcollection.manager'
+    local dbc = require 'dbcollection'
     local dbdataset = dbc.load(name)
     local num_classes = dbdataset:size('train', 'classes')[1]
 
