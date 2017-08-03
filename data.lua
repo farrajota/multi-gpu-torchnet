@@ -75,8 +75,7 @@ local function loader_ilsvrc2012(dbloader, num_classes, mode)
         local img_idx = imgs_class[random_idx] + 1 -- lua is 1-indexed
 
         -- fetch image filename
-        local filename = dbloader:get(mode, 'image_filenames', img_idx)
-        filename = ascii2str(filename)[1]
+        local filename = ascii2str(dbloader:get(mode, 'image_filenames', img_idx))
         filename = paths.concat(dbloader.data_dir, filename) -- merge data dirpath to filename
 
         -- output data
